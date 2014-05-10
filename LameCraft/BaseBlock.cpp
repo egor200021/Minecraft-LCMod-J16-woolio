@@ -11,6 +11,9 @@ BaseBlock::BaseBlock()
     sidePlane3;
     sidePlane4;
 
+    material = 0; // 1 - wood/plank; 2 - stone; 3 - dirt/sand; 4 - leaves
+    loot = -1;
+
 	vertices = NULL;
 
 	soundType = -1;

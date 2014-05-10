@@ -18,6 +18,7 @@ public:
 	float sidePlane2;
     float sidePlane3;
     float sidePlane4;
+    short loot;
 	//vertices to show in bar or in hand
 	CraftPSPVertex *vertices;
 
@@ -29,7 +30,7 @@ public:
 	bool transparent;
 	bool lightSource;
 	bool blockSpecial;
-	bool show_in_inventory;
+	short material;
 
 	BaseBlock();
 	virtual ~BaseBlock();

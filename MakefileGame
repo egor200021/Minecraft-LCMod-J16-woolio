@@ -30,8 +30,12 @@ source/Aurora/System/SystemManager.o \
 source/Aurora/System/NetworkManager.o \
 LameCraft/BaseBlock.o \
 LameCraft/Blocks.o \
+LameCraft/BaseItem.o \
+LameCraft/Items.o \
 LameCraft/SimpleMeshChunk2.o \
 LameCraft/CraftWorld2.o \
+LameCraft/LameMob.o \
+LameCraft/Mobs.o \
 LameCraft/StateMenu.o \
 LameCraft/StateOptions.o \
 LameCraft/StatePlay.o \

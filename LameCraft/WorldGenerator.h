@@ -12,8 +12,12 @@ class WorldGenerator
 		void initPumpkins(int WORLD_SIZE, int PumpkinChoose, CraftWorld *world);
 		//void initClouds(int WORLD_SIZE, int CloudChoose, CraftWorld *world);
 		void initTypes(int WORLD_SIZE, int TypeChoose, CraftWorld *world);
+		void initGeology(int WORLD_SIZE, CraftWorld *world);
+		void initDeepGeology(int WORLD_SIZE, CraftWorld *world);
+		void initClay(int WORLD_SIZE, CraftWorld *world);
 		void initIron(int WORLD_SIZE, CraftWorld *world);
 		void initCoal(int WORLD_SIZE, CraftWorld *world);
+		void initLignite(int WORLD_SIZE, CraftWorld *world);
 		void initGold(int WORLD_SIZE, CraftWorld *world);
 		void initRedStone(int WORLD_SIZE, CraftWorld *world);
 		void initDiamond(int WORLD_SIZE, CraftWorld *world);

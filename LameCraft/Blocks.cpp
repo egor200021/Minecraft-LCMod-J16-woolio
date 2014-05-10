@@ -13,6 +13,9 @@ GrassBlock::GrassBlock():BaseBlock()
 	transparent = false;
 	soundType = 0;
 
+	loot = 2;
+	material = 3;
+
 }
 
 block_t GrassBlock::getID(){ return 1;}
@@ -27,6 +30,9 @@ DirtBlock::DirtBlock():BaseBlock()
 	editable = true;
 	transparent = false;
 	soundType = 1;
+
+	loot = 2;
+	material = 3;
 
 }
 
@@ -44,6 +50,9 @@ RockBlock::RockBlock():BaseBlock()
 	transparent = false;
 	soundType = 2;
 
+	loot = 36;
+	material = 2;
+
 }
 
 block_t RockBlock::getID(){ return 3;}
@@ -53,12 +62,14 @@ WaterBlock::WaterBlock():BaseBlock()
 {
 	textureRow = 3;
 
-	upPlane = 2;
-	downPlane = 2;
-	sidePlane = 2;
+    upPlane = 2;
+    downPlane = 2;
+    sidePlane = 2;
 	editable = false;
 	transparent = true;
 	soundType = -1;
+
+	loot = 4;
 
 }
 
@@ -75,6 +86,9 @@ GoldBlock::GoldBlock():BaseBlock()
 	transparent = false;
 	soundType = 2;
 
+	loot = 5;
+	material = 2;
+
 }
 
 block_t GoldBlock::getID(){ return 5;}
@@ -89,6 +103,9 @@ LadderBlock::LadderBlock():BaseBlock()
 	editable = true;
 	transparent = true;
 	soundType = 3;
+
+	loot = 6;
+	material = 1;
 
 }
 block_t LadderBlock::getID(){ return 6;}
@@ -105,6 +122,9 @@ SandBlock::SandBlock():BaseBlock()
 	transparent = false;
 	soundType = 1;
 
+	loot = 7;
+	material = 3;
+
 }
 block_t SandBlock::getID(){ return 7;}
 
@@ -120,6 +140,9 @@ WoodBlock::WoodBlock():BaseBlock()
 	transparent = false;
 	soundType = 3;
 
+	loot = 8;
+	material = 1;
+
 }
 block_t WoodBlock::getID(){ return 8;}
 
@@ -134,11 +157,14 @@ LeavesBlock::LeavesBlock():BaseBlock()
 	transparent = false;
 	soundType = 0;
 
+	loot = 9;
+	material = 4;
+
 }
 block_t LeavesBlock::getID(){ return 9;}
 
 
-TNTBlock::TNTBlock():BaseBlock()
+GrayWoolBlock::GrayWoolBlock():BaseBlock()
 {
 	textureRow = 4;
 
@@ -149,8 +175,11 @@ TNTBlock::TNTBlock():BaseBlock()
 	transparent = false;
 	soundType = 3;
 
+	loot = 10;
+	material = 4;
+
 }
-block_t TNTBlock::getID(){ return 10;}
+block_t GrayWoolBlock::getID(){ return 10;}
 
 
 BlackWoolBlock::BlackWoolBlock():BaseBlock()
@@ -163,6 +192,8 @@ BlackWoolBlock::BlackWoolBlock():BaseBlock()
 	editable = true;
 	transparent = false;
 	soundType = 3;
+
+	loot = 11;
 
 }
 block_t BlackWoolBlock::getID(){ return 11;}
@@ -179,6 +210,8 @@ RedWoolBlock::RedWoolBlock():BaseBlock()
 	transparent = false;
 	soundType = 3;
 
+	loot = 12;
+
 }
 block_t RedWoolBlock::getID(){ return 12;}
 
@@ -193,6 +226,8 @@ DarkGreyWoolBlock::DarkGreyWoolBlock():BaseBlock()
 	editable = true;
 	transparent = false;
 	soundType = 3;
+
+	loot = 13;
 
 }
 block_t DarkGreyWoolBlock::getID(){ return 13;}
@@ -210,6 +245,8 @@ BrownWoolBlock::BrownWoolBlock():BaseBlock()
 	transparent = false;
 	soundType = 3;
 
+	loot = 14;
+
 }
 block_t BrownWoolBlock::getID(){ return 14;}
 
@@ -224,6 +261,8 @@ LightBlackWoolBlock::LightBlackWoolBlock():BaseBlock()
 	editable = true;
 	transparent = false;
 	soundType = 3;
+
+	loot = 15;
 
 }
 block_t LightBlackWoolBlock::getID(){ return 15;}
@@ -241,6 +280,8 @@ PinkWoolBlock::PinkWoolBlock():BaseBlock()
 	transparent = false;
 	soundType = 3;
 
+	loot = 16;
+
 }
 block_t PinkWoolBlock::getID(){ return 16;}
 
@@ -256,6 +297,8 @@ LightGreenWoolBlock::LightGreenWoolBlock():BaseBlock()
 	transparent = false;
 	soundType = 3;
 
+	loot = 17;
+
 }
 block_t LightGreenWoolBlock::getID(){ return 17;}
 
@@ -269,6 +312,8 @@ YellowWoolBlock::YellowWoolBlock():BaseBlock()
 	editable = true;
 	transparent = false;
 	soundType = 3;
+
+	loot = 18;
 
 }
 block_t YellowWoolBlock::getID(){ return 18;}
@@ -284,6 +329,8 @@ BlueWoolBlock::BlueWoolBlock():BaseBlock()
 	transparent = false;
 	soundType = 3;
 
+	loot = 19;
+
 }
 block_t BlueWoolBlock::getID(){ return 19;}
 
@@ -298,6 +345,8 @@ LightBlueWoolBlock::LightBlueWoolBlock():BaseBlock()
 	transparent = false;
 	soundType = 3;
 
+	loot = 20;
+
 }
 block_t LightBlueWoolBlock::getID(){ return 20;}
 
@@ -311,6 +360,7 @@ FioletWoolBlock::FioletWoolBlock():BaseBlock()
 	editable = true;
 	transparent = false;
 	soundType = 3;
+	loot = 21;
 
 }
 block_t FioletWoolBlock::getID(){ return 21;}
@@ -326,6 +376,8 @@ PastelWoolBlock::PastelWoolBlock():BaseBlock()
 	transparent = false;
 	soundType = 3;
 
+	loot = 22;
+
 }
 block_t PastelWoolBlock::getID(){ return 22;}
 
@@ -340,6 +392,9 @@ LightFioletWoolBlock::LightFioletWoolBlock():BaseBlock()
 	transparent = false;
 	soundType = 3;
 
+
+	loot = 23;
+
 }
 block_t LightFioletWoolBlock::getID(){ return 23;}
 
@@ -353,6 +408,8 @@ OrangeWoolBlock::OrangeWoolBlock():BaseBlock()
 	editable = true;
 	transparent = false;
 	soundType = 3;
+
+	loot = 24;
 
 }
 block_t OrangeWoolBlock::getID(){ return 24;}
@@ -369,6 +426,9 @@ CactusBlock::CactusBlock():BaseBlock()
     blockSpecial = true;
 	soundType = 3;
 
+	loot = 25;
+	material = 1;
+
 }
 block_t CactusBlock::getID(){ return 25;}
 
@@ -383,6 +443,8 @@ AllSnowBlock::AllSnowBlock():BaseBlock()
 	transparent = false;
 	soundType = 0;
 
+	loot = 26;
+
 }
 block_t AllSnowBlock::getID(){ return 26;}
 
@@ -395,6 +457,9 @@ BrickBlock::BrickBlock():BaseBlock()
 	sidePlane = 7;
 	editable = true;
 	transparent = false;
+
+	loot = 27;
+	material = 2;
 
 }
 block_t BrickBlock::getID(){ return 27;}
@@ -410,6 +475,9 @@ CageBlock::CageBlock():BaseBlock()
 	transparent = true;
 	soundType = 2;
 
+	loot = 28;
+	material = 2;
+
 }
 block_t CageBlock::getID(){ return 28;}
 
@@ -424,6 +492,9 @@ SnowBlock::SnowBlock():BaseBlock()
 	transparent = false;
 	soundType = 0;
 
+	loot = 29;
+	material = 3;
+
 }
 block_t SnowBlock::getID(){ return 29;}
 
@@ -433,10 +504,13 @@ DarkWoodBlock::DarkWoodBlock():BaseBlock()
 
 	upPlane = 1;
 	downPlane = 1;
-	sidePlane = 4;
+	sidePlane = 5;
 	editable = true;
 	transparent = false;
 	soundType = 3;
+
+	loot = 30;
+	material = 1;
 
 }
 block_t DarkWoodBlock::getID(){ return 30;}
@@ -447,10 +521,13 @@ WhiteWoodBlock::WhiteWoodBlock():BaseBlock()
 
 	upPlane = 1;
 	downPlane = 1;
-	sidePlane = 5;
+	sidePlane = 4;
 	editable = true;
 	transparent = false;
 	soundType = 3;
+
+	loot = 31;
+	material = 1;
 
 }
 block_t WhiteWoodBlock::getID(){ return 31;}
@@ -466,6 +543,8 @@ IceBlock::IceBlock():BaseBlock()
 	transparent = true;
 	soundType = 2;
 
+	loot = -1;
+
 }
 block_t IceBlock::getID(){ return 32;}
 
@@ -480,10 +559,12 @@ CaneBlock::CaneBlock():BaseBlock()
 	transparent = true;
     blockSpecial = true;
 
+    loot = 33;
+
 }
 block_t CaneBlock::getID(){ return 33;}
 
-BoxBlock::BoxBlock():BaseBlock()
+BoxBlock::BoxBlock():BaseBlock() // planks
 {
 	textureRow = 4;
 
@@ -493,6 +574,9 @@ BoxBlock::BoxBlock():BaseBlock()
 	editable = true;
 	transparent = false;
 	soundType = 3;
+
+    loot = 34;
+    material = 1;
 
 }
 block_t BoxBlock::getID(){ return 34;}
@@ -508,10 +592,12 @@ ShelfBlock::ShelfBlock():BaseBlock()
 	transparent = false;
 	soundType = 3;
 
+    loot = 35;
+
 }
 block_t ShelfBlock::getID(){ return 35;}
 
-WallBlock::WallBlock():BaseBlock()
+CobbleStone::CobbleStone():BaseBlock()
 {
 	textureRow = 4;
 
@@ -522,8 +608,10 @@ WallBlock::WallBlock():BaseBlock()
 	transparent = false;
 	soundType = 2;
 
+		loot = 36;
+
 }
-block_t WallBlock::getID(){ return 36;}
+block_t CobbleStone::getID(){ return 36;}
 
 DrySandBlock::DrySandBlock():BaseBlock()
 {
@@ -535,6 +623,8 @@ DrySandBlock::DrySandBlock():BaseBlock()
 	editable = true;
 	transparent = false;
 	soundType = 1;
+
+		loot = 36;
 
 }
 block_t DrySandBlock::getID(){ return 37;}
@@ -550,6 +640,8 @@ SnowLewesBlock::SnowLewesBlock():BaseBlock()
 	transparent = false;
 	soundType = 0;
 
+		loot = 37;
+
 }
 block_t SnowLewesBlock::getID(){ return 38;}
 
@@ -563,6 +655,8 @@ Sponge::Sponge():BaseBlock()
 	editable = true;
 	transparent = false;
 	soundType = 1;
+
+		loot = 38;
 
 }
 block_t Sponge::getID(){ return 39;}
@@ -578,10 +672,12 @@ GlassBlock::GlassBlock():BaseBlock()
 	transparent = true;
 	soundType = 2;
 
+		loot = -1;
+
 }
 block_t GlassBlock::getID(){ return 40;}
 
-BrownCoailBlock::BrownCoailBlock():BaseBlock()
+IronOre::IronOre():BaseBlock()
 {
 	textureRow = 6;
 
@@ -592,10 +688,13 @@ BrownCoailBlock::BrownCoailBlock():BaseBlock()
 	transparent = false;
 	soundType = 2;
 
-}
-block_t BrownCoailBlock::getID(){ return 41;}
+		loot = 41;
+		material = 2;
 
-BlackCoailBlock::BlackCoailBlock():BaseBlock()
+}
+block_t IronOre::getID(){ return 41;}
+
+CoalOre::CoalOre():BaseBlock()
 {
 	textureRow = 6;
 
@@ -606,10 +705,13 @@ BlackCoailBlock::BlackCoailBlock():BaseBlock()
 	transparent = false;
 	soundType = 2;
 
-}
-block_t BlackCoailBlock::getID(){ return 42;}
+	loot = 277;
+	material = 2;
 
-BlueCoailBlock::BlueCoailBlock():BaseBlock()
+}
+block_t CoalOre::getID(){ return 42;}
+
+DiamondOre::DiamondOre():BaseBlock()
 {
 	textureRow = 6;
 
@@ -620,10 +722,13 @@ BlueCoailBlock::BlueCoailBlock():BaseBlock()
 	transparent = false;
 	soundType = 2;
 
-}
-block_t BlueCoailBlock::getID(){ return 43;}
+	loot = 279;
+	material = 2;
 
-RedCoailBlock::RedCoailBlock():BaseBlock()
+}
+block_t DiamondOre::getID(){ return 43;}
+
+RedstoneOre::RedstoneOre():BaseBlock()
 {
 	textureRow = 6;
 
@@ -634,8 +739,11 @@ RedCoailBlock::RedCoailBlock():BaseBlock()
 	transparent = false;
 	soundType = 2;
 
+	loot = 44;
+	material = 2;
+
 }
-block_t RedCoailBlock::getID(){ return 44;}
+block_t RedstoneOre::getID(){ return 44;}
 
 SlamRockBlock::SlamRockBlock():BaseBlock()
 {
@@ -647,6 +755,8 @@ SlamRockBlock::SlamRockBlock():BaseBlock()
 	editable = true;
 	transparent = false;
 	soundType = 2;
+
+	material = 2;
 
 }
 block_t SlamRockBlock::getID(){ return 45;}
@@ -692,6 +802,8 @@ Torch::Torch():BaseBlock()
 	soundType = 2;
 	lightSource = true;
 	blockSpecial = true;
+
+		loot = 48;
 
 }
 block_t Torch::getID(){ return 48;}
@@ -851,6 +963,9 @@ Planks1::Planks1():BaseBlock()
 	editable = true;
 	transparent = false;
 
+		loot = 60;
+		material = 1;
+
 }
 block_t Planks1::getID(){ return 60;}
 
@@ -864,6 +979,8 @@ Planks2::Planks2():BaseBlock()
 	editable = true;
 	transparent = false;
 
+		loot = 61;
+
 }
 block_t Planks2::getID(){ return 61;}
 
@@ -876,6 +993,8 @@ Planks3::Planks3():BaseBlock()
 	sidePlane = 8;
 	editable = true;
 	transparent = false;
+
+		loot = 62;
 
 }
 block_t Planks3::getID(){ return 62;}
@@ -903,6 +1022,9 @@ Diamond::Diamond():BaseBlock()
 	editable = true;
 	transparent = false;
 
+		loot = 64;
+		material = 2;
+
 }
 block_t Diamond::getID(){ return 64;}
 
@@ -915,6 +1037,9 @@ Gold::Gold():BaseBlock()
 	sidePlane = 1;
 	editable = true;
 	transparent = false;
+
+		loot = 65;
+		material = 2;
 
 }
 block_t Gold::getID(){ return 65;}
@@ -929,6 +1054,9 @@ Iron::Iron():BaseBlock()
 	sidePlane = 0;
 	editable = true;
 	transparent = false;
+
+		loot = 66;
+		material = 2;
 
 }
 block_t Iron::getID(){ return 66;}
@@ -995,6 +1123,8 @@ MelonBlock::MelonBlock():BaseBlock()
     editable = true;
     transparent = false;
 
+    	loot = 71;
+
 }
 block_t MelonBlock::getID(){ return 71;}
 
@@ -1039,6 +1169,9 @@ Pumpkin::Pumpkin():BaseBlock()
     transparent = false;
     blockSpecial = true;
 
+    	loot = 74;
+    	material = 1;
+
 }
 block_t Pumpkin::getID(){ return 74;}
 
@@ -1056,57 +1189,69 @@ GlowStone::GlowStone():BaseBlock()
 }
 block_t GlowStone::getID(){ return 75;}
 
-AetherGrass::AetherGrass():BaseBlock()
+Basalt::Basalt():BaseBlock()
 {
     textureRow = 9;
 
-    upPlane = 3;
+    upPlane = 2;
     downPlane = 2;
+    sidePlane = 2;
+    editable = true;
+    transparent = false;
+
+    loot =  101;
+    material = 2;
+
+}
+block_t Basalt::getID(){ return 76;}
+
+Gabbro::Gabbro():BaseBlock()
+{
+    textureRow = 9;
+
+    upPlane = 4;
+    downPlane = 4;
     sidePlane = 4;
     editable = true;
     transparent = false;
 
-}
-block_t AetherGrass::getID(){ return 76;}
+    loot = 102;
+    material = 2;
 
-AetherWood::AetherWood():BaseBlock()
+}
+block_t Gabbro::getID(){ return 77;}
+
+Dacite::Dacite():BaseBlock()
 {
     textureRow = 9;
 
     upPlane = 6;
     downPlane = 6;
-    sidePlane = 5;
+    sidePlane = 6;
     editable = true;
     transparent = false;
 
-}
-block_t AetherWood::getID(){ return 77;}
+    loot = 103;
+    material = 2;
 
-AetherLeaves::AetherLeaves():BaseBlock()
+}
+block_t Dacite::getID(){ return 78;}
+
+Soil::Soil():BaseBlock()
 {
     textureRow = 9;
 
-    upPlane = 7;
-    downPlane = 7;
-    sidePlane = 7;
+    upPlane = 13;
+    downPlane = 13;
+    sidePlane = 13;
     editable = true;
     transparent = false;
 
-}
-block_t AetherLeaves::getID(){ return 78;}
-
-AetherPlanks::AetherPlanks():BaseBlock()
-{
-    textureRow = 6;
-
-    upPlane = 9;
-    downPlane = 9;
-    sidePlane = 9;
-    editable = true;
-    transparent = false;
+    loot = 2;
+    material = 3;
 
 }
-block_t AetherPlanks::getID(){ return 79;}
+block_t Soil::getID(){ return 79;}
 
 MooshroomLeaves::MooshroomLeaves():BaseBlock()
 {
@@ -1140,7 +1285,7 @@ HalfBlock8::HalfBlock8():BaseBlock()
 
     upPlane = 2;
     downPlane = 2;
-    sidePlane = 12;
+    sidePlane = 2;
     editable = true;
     transparent = false;
     blockSpecial = true;
@@ -1154,7 +1299,7 @@ HalfBlock0::HalfBlock0():BaseBlock()
 
     upPlane = 4;
     downPlane = 4;
-    sidePlane = 11;
+    sidePlane = 4;
     editable = true;
     transparent = false;
     blockSpecial = true;
@@ -1168,7 +1313,7 @@ HalfBlock1::HalfBlock1():BaseBlock()
 
     upPlane = 8;
     downPlane = 8;
-    sidePlane = 11;
+    sidePlane = 9;
     editable = true;
     transparent = false;
     blockSpecial = true;
@@ -1183,7 +1328,7 @@ HalfBlock2::HalfBlock2():BaseBlock()
 
     upPlane = 4;
     downPlane = 5;
-    sidePlane = 11;
+    sidePlane = 4;
     editable = true;
     transparent = false;
     blockSpecial = true;
@@ -1198,7 +1343,7 @@ HalfBlock3::HalfBlock3():BaseBlock()
 
     upPlane = 0;
     downPlane = 0;
-    sidePlane = 10;
+    sidePlane = 0;
     editable = true;
     transparent = false;
     blockSpecial = true;
@@ -1213,7 +1358,7 @@ HalfBlock4::HalfBlock4():BaseBlock()
 
     upPlane = 7;
     downPlane = 7;
-    sidePlane = 12;
+    sidePlane = 7;
     editable = true;
     transparent = false;
     blockSpecial = true;
@@ -1228,7 +1373,7 @@ HalfBlock5::HalfBlock5():BaseBlock()
 
     upPlane = 8;
     downPlane = 8;
-    sidePlane = 13;
+    sidePlane = 8;
     editable = true;
     transparent = false;
     blockSpecial = true;
@@ -1243,7 +1388,7 @@ HalfBlock6::HalfBlock6():BaseBlock()
 
     upPlane = 8;
     downPlane = 8;
-    sidePlane = 10;
+    sidePlane = 8;
     editable = true;
     transparent = false;
     blockSpecial = true;
@@ -1258,7 +1403,7 @@ HalfBlock7::HalfBlock7():BaseBlock()
 
     upPlane = 9;
     downPlane = 9;
-    sidePlane = 11;
+    sidePlane = 9;
     editable = true;
     transparent = false;
     blockSpecial = true;
@@ -1272,8 +1417,8 @@ Cake::Cake():BaseBlock()
     textureRow = 0;
 
     upPlane = 11;
-    downPlane = 13;
-    sidePlane = 12;
+    downPlane = 12;
+    sidePlane = 13;
     editable = true;
     transparent = false;
     blockSpecial = true;
@@ -1288,7 +1433,7 @@ TrapDoor::TrapDoor():BaseBlock()
 
     upPlane = 11;
     downPlane = 11;
-    sidePlane = 12;
+    sidePlane = 11;
     editable = true;
     transparent = true;
     blockSpecial = true;
@@ -1383,37 +1528,63 @@ AetherBlock1::AetherBlock1():BaseBlock()
 }
 block_t AetherBlock1::getID(){ return 98;}
 
-AetherBlock2::AetherBlock2():BaseBlock()
+ClayBlock::ClayBlock():BaseBlock()
 {
-    textureRow = 10;
+    textureRow = 1;
 
-    upPlane = 12;
-    downPlane = 2;
-    sidePlane = 12;
+    upPlane = 10;
+    downPlane = 10;
+    sidePlane = 10;
     editable = true;
     transparent = false;
     lightSource = false;
 
-}
-block_t AetherBlock2::getID(){ return 99;}
+    loot = 99;
+    material = 3;
 
-AetherBlock3::AetherBlock3():BaseBlock()
+}
+block_t ClayBlock::getID(){ return 99;}
+
+Chest::Chest():BaseBlock()
 {
     textureRow = 10;
 
     upPlane = 4;
+    downPlane = 4;
+    sidePlane = 3;
+    sidePlane2 = 5;
+    sidePlane3 = 5;
+    sidePlane4 = 5;
+    editable = true;
+    transparent = false;
+    blockSpecial = true;
+
+    loot = 100;
+    material = 1;
+
+}
+block_t Chest::getID(){ return 100;}
+
+BasaltCobble::BasaltCobble():BaseBlock()
+{
+    textureRow = 9;
+
+    upPlane = 3;
     downPlane = 3;
     sidePlane = 3;
     editable = true;
     transparent = false;
     lightSource = false;
 
-}
-block_t AetherBlock3::getID(){ return 100;}
+    loot = 101;
+    material = 2;
 
-AetherBlock4::AetherBlock4():BaseBlock()
+}
+block_t BasaltCobble::getID(){ return 101;}
+
+GabbroCobble::GabbroCobble():BaseBlock()
 {
-    textureRow = 10;
+    textureRow = 9;
 
     upPlane = 5;
     downPlane = 5;
@@ -1422,36 +1593,28 @@ AetherBlock4::AetherBlock4():BaseBlock()
     transparent = false;
     lightSource = false;
 
+    loot = 102;
+    material = 2;
+
 }
-block_t AetherBlock4::getID(){ return 101;}
+block_t GabbroCobble::getID(){ return 102;}
 
-AetherBlock5::AetherBlock5():BaseBlock()
+DaciteCobble::DaciteCobble():BaseBlock()
 {
-    textureRow = 10;
+    textureRow = 9;
 
-    upPlane = 5;
-    downPlane = 5;
-    sidePlane = 5;
+    upPlane = 7;
+    downPlane = 7;
+    sidePlane = 7;
     editable = true;
     transparent = false;
     lightSource = false;
 
-}
-block_t AetherBlock5::getID(){ return 102;}
-
-AetherBlock6::AetherBlock6():BaseBlock()
-{
-    textureRow = 10;
-
-    upPlane = 6;
-    downPlane = 6;
-    sidePlane = 6;
-    editable = true;
-    transparent = false;
-    lightSource = false;
+    loot = 103;
+    material = 2;
 
 }
-block_t AetherBlock6::getID(){ return 103;}
+block_t DaciteCobble::getID(){ return 103;}
 
 Furnace::Furnace():BaseBlock()
 {
@@ -1463,6 +1626,9 @@ Furnace::Furnace():BaseBlock()
     editable = true;
     transparent = false;
     lightSource = false;
+
+    loot = 104;
+    material = 2;
 
 }
 block_t Furnace::getID(){ return 104;}
@@ -1477,6 +1643,9 @@ Crafting::Crafting():BaseBlock()
     editable = true;
     transparent = false;
     lightSource = false;
+
+    loot = 105;
+    material = 1;
 
 }
 block_t Crafting::getID(){ return 105;}
@@ -1495,7 +1664,7 @@ JungleLeaves::JungleLeaves():BaseBlock()
 }
 block_t JungleLeaves::getID(){ return 106;}
 
-RedRock::RedRock():BaseBlock()
+Granite::Granite():BaseBlock()
 {
     textureRow = 2;
 
@@ -1506,10 +1675,13 @@ RedRock::RedRock():BaseBlock()
     transparent = false;
     lightSource = false;
 
-}
-block_t RedRock::getID(){ return 107;}
+    loot = 125;
+    material = 2;
 
-BrownRock::BrownRock():BaseBlock()
+}
+block_t Granite::getID(){ return 107;}
+
+Rhyolite::Rhyolite():BaseBlock()
 {
     textureRow = 2;
 
@@ -1520,10 +1692,13 @@ BrownRock::BrownRock():BaseBlock()
     transparent = false;
     lightSource = false;
 
-}
-block_t BrownRock::getID(){ return 108;}
+    loot = 126;
+    material = 2;
 
-GreyRock::GreyRock():BaseBlock()
+}
+block_t Rhyolite::getID(){ return 108;}
+
+Komatiite::Komatiite():BaseBlock()
 {
     textureRow = 2;
 
@@ -1534,8 +1709,11 @@ GreyRock::GreyRock():BaseBlock()
     transparent = false;
     lightSource = false;
 
+    loot = 127;
+    material = 2;
+
 }
-block_t GreyRock::getID(){ return 109;}
+block_t Komatiite::getID(){ return 109;}
 
 TNT::TNT():BaseBlock()
 {
@@ -1674,6 +1852,8 @@ Flower1::Flower1():BaseBlock()
 	transparent = true;
     blockSpecial = true;
 
+    loot = 119;
+
 }
 block_t Flower1::getID(){ return 119;}
 
@@ -1688,9 +1868,28 @@ Flower2::Flower2():BaseBlock()
 	transparent = true;
     blockSpecial = true;
 
+    loot = 120;
+
 }
 block_t Flower2::getID(){ return 120;}
 
+
+
+Sapling::Sapling():BaseBlock()
+{
+    textureRow = 5;
+
+    upPlane = 14;
+    downPlane = 14;
+    sidePlane = 14;
+    editable = true;
+    transparent = true;
+    blockSpecial = true;
+
+    loot = 121;
+
+}
+block_t Sapling::getID(){ return 121;}
 
 Pumpkin2::Pumpkin2():BaseBlock()
 {
@@ -1706,8 +1905,10 @@ Pumpkin2::Pumpkin2():BaseBlock()
     transparent = false;
     blockSpecial = true;
 
+
+    loot = 74;
 }
-block_t Pumpkin2::getID(){ return 121;}
+block_t Pumpkin2::getID(){ return 122;}
 
 Pumpkin3::Pumpkin3():BaseBlock()
 {
@@ -1723,8 +1924,10 @@ Pumpkin3::Pumpkin3():BaseBlock()
     transparent = false;
     blockSpecial = true;
 
+    loot = 74;
+
 }
-block_t Pumpkin3::getID(){ return 122;}
+block_t Pumpkin3::getID(){ return 123;}
 
 
 Pumpkin4::Pumpkin4():BaseBlock()
@@ -1741,10 +1944,219 @@ Pumpkin4::Pumpkin4():BaseBlock()
     transparent = false;
     blockSpecial = true;
 
+    loot = 74;
+
 }
-block_t Pumpkin4::getID(){ return 123;}
+block_t Pumpkin4::getID(){ return 124;}
+
+GranitCobble::GranitCobble():BaseBlock()
+{
+    textureRow = 6;
+
+    upPlane = 13;
+    downPlane = 13;
+    sidePlane = 13;
+
+    editable = true;
+    transparent = false;
+
+    loot = 125;
+    material = 2;
+
+}
+block_t GranitCobble::getID(){ return 125;}
+
+RhyoliteCobble::RhyoliteCobble():BaseBlock()
+{
+    textureRow = 6;
+
+    upPlane = 12;
+    downPlane = 12;
+    sidePlane = 12;
+    editable = true;
+    transparent = false;
+
+    loot = 126;
+    material = 2;
+
+}
+block_t RhyoliteCobble::getID(){ return 126;}
+
+KomatiiteCobble::KomatiiteCobble():BaseBlock()
+{
+    textureRow = 6;
+
+    upPlane = 11;
+    downPlane = 11;
+    sidePlane = 11;
+    editable = true;
+    transparent = false;
+
+    loot = 127;
+    material = 2;
+
+}
+block_t KomatiiteCobble::getID(){ return 127;}
+
+MarbleCobble::MarbleCobble():BaseBlock()
+{
+    textureRow = 6;
+
+    upPlane = 14;
+    downPlane = 14;
+    sidePlane = 14;
+    editable = true;
+    transparent = false;
+
+    loot = 128;
+    material = 2;
+
+}
+block_t MarbleCobble::getID(){ return 128;}
+
+Marble::Marble():BaseBlock()
+{
+    textureRow = 9;
+
+    upPlane = 14;
+    downPlane = 14;
+    sidePlane = 14;
+    editable = true;
+    transparent = false;
+
+    loot = 128;
+    material = 2;
+
+}
+block_t Marble::getID(){ return 129;}
+
+Lignite::Lignite():BaseBlock()
+{
+    textureRow = 2;
+
+    upPlane = 15;
+    downPlane = 15;
+    sidePlane = 15;
+    editable = true;
+    transparent = false;
+
+    loot = 282;
+    material = 2;
+
+}
+block_t Lignite::getID(){ return 130;}
+
+Chest2::Chest2():BaseBlock()
+{
+    textureRow = 10;
+
+    upPlane = 4;
+    downPlane = 4;
+    sidePlane = 5;
+    sidePlane2 = 3;
+    sidePlane3 = 5;
+    sidePlane4 = 5;
+    editable = true;
+    transparent = false;
+    blockSpecial = true;
+
+    loot = 100;
+    material = 1;
 
 
+}
+block_t Chest2::getID(){ return 131;}
+
+Chest3::Chest3():BaseBlock()
+{
+    textureRow = 10;
+
+    upPlane = 4;
+    downPlane = 4;
+    sidePlane = 5;
+    sidePlane2 = 5;
+    sidePlane3 = 3;
+    sidePlane4 = 5;
+    editable = true;
+    transparent = false;
+    blockSpecial = true;
+
+    loot = 100;
+    material = 1;
+
+
+}
+block_t Chest3::getID(){ return 132;}
+
+Chest4::Chest4():BaseBlock()
+{
+    textureRow = 10;
+
+    upPlane = 4;
+    downPlane = 4;
+    sidePlane = 5;
+    sidePlane2 = 5;
+    sidePlane3 = 5;
+    sidePlane4 = 3;
+    editable = true;
+    transparent = false;
+    blockSpecial = true;
+
+    loot = 100;
+    material = 1;
+
+
+}
+block_t Chest4::getID(){ return 133;}
+
+
+WheatBlock1::WheatBlock1():BaseBlock()
+{
+    textureRow = 7;
+
+    sidePlane = 12;
+    downPlane = 12;
+    upPlane = 12;
+	editable = true;
+	transparent = true;
+    blockSpecial = true;
+
+    loot = 286;
+
+}
+block_t WheatBlock1::getID(){ return 134;}
+
+WheatBlock2::WheatBlock2():BaseBlock()
+{
+    textureRow = 7;
+
+    sidePlane = 13;
+    downPlane = 13;
+    upPlane = 13;
+	editable = true;
+	transparent = true;
+    blockSpecial = true;
+
+    loot = 286;
+
+}
+block_t WheatBlock2::getID(){ return 135;}
+
+WheatBlock3::WheatBlock3():BaseBlock()
+{
+    textureRow = 7;
+
+    sidePlane = 14;
+    downPlane = 14;
+    upPlane = 14;
+	editable = true;
+	transparent = true;
+    blockSpecial = true;
+
+    loot = 287;
+
+}
+block_t WheatBlock3::getID(){ return 136;}
 
 //must be last
 TrapDoor2::TrapDoor2():BaseBlock()
@@ -1759,7 +2171,7 @@ TrapDoor2::TrapDoor2():BaseBlock()
     lightSource = false;
     blockSpecial = true;
 }
-block_t TrapDoor2::getID(){ return 125;}
+block_t TrapDoor2::getID(){ return 137;}
 
 
 Door3::Door3():BaseBlock()
@@ -1774,7 +2186,7 @@ Door3::Door3():BaseBlock()
 	blockSpecial = true;
 
 }
-block_t Door3::getID(){ return 126;}
+block_t Door3::getID(){ return 138;}
 
 Door4::Door4():BaseBlock()
 {
@@ -1787,20 +2199,20 @@ Door4::Door4():BaseBlock()
 	transparent = true;
 	blockSpecial = true;
 }
-block_t Door4::getID(){ return 127;}
+block_t Door4::getID(){ return 139;}
 
 Furnace2::Furnace2():BaseBlock()
 {
     textureRow = 10;
 
-    upPlane = 7;
+    upPlane = 12;
     downPlane = 7;
     sidePlane = 9;
     editable = true;
     transparent = false;
 
 }
-block_t Furnace2::getID(){ return 128;}
+block_t Furnace2::getID(){ return 140;}
 
 Cloud::Cloud():BaseBlock()
 {
@@ -1813,7 +2225,7 @@ Cloud::Cloud():BaseBlock()
     transparent = true;
 
 }
-block_t Cloud::getID(){ return 129;}
+block_t Cloud::getID(){ return 141;}
 
 IronBlock::IronBlock():BaseBlock()
 {
@@ -1827,4 +2239,4 @@ IronBlock::IronBlock():BaseBlock()
 	soundType = 2;
 
 }
-block_t IronBlock::getID(){ return 130;}
+block_t IronBlock::getID(){ return 142;}

@@ -91,6 +91,7 @@ void StateMenu::Init()
     makeDirt = true;
     makeCanes = true;
     generateSelectPose = 0;
+    SplashNumber = rand() % 5;
 
     saveSubmenu = false;
     saveSubMenuSelect = 2;
@@ -174,6 +175,7 @@ void StateMenu::HandleEvents(StateManager* sManager)
 
         if(mSystemMgr->KeyPressed(PSP_CTRL_CROSS))
         {
+            SplashNumber = rand() % 5;
             if(selectPos == 0)//play state
             {
             generateSelectPose = 0;
@@ -473,94 +475,6 @@ void StateMenu::HandleEvents(StateManager* sManager)
         }
     }
     break;
-    case 4://chooose to generate randomly or marametric
-    {
-
-
-
-
-        if(mSystemMgr->KeyPressed(PSP_CTRL_UP))
-        {
-            generateSelectPose--;
-            if(generateSelectPose < 0)
-                generateSelectPose = 2;
-
-            mSoundMgr->PlayMenuSound();
-        }
-
-        if(mSystemMgr->KeyPressed(PSP_CTRL_DOWN))
-        {
-            generateSelectPose++;
-            if(generateSelectPose > 2)
-                generateSelectPose = 0;
-
-            mSoundMgr->PlayMenuSound();
-        }
-
-        if(mSystemMgr->KeyPressed(PSP_CTRL_CIRCLE))
-        {
-            generateSelectPose = 0;
-            menuState = 7;
-        }
-
-        if(mSystemMgr->KeyPressed(PSP_CTRL_CROSS))
-        {
-            if(generateSelectPose == 0)
-            {
-                int testseed = rand() % 10000;
-                 unsigned short test[128];
-                unsigned short opis[10] = {'W','o','r','l','d',' ','n','a','m','e'};
-                if(mSystemMgr->ShowOSK(opis,test,128) != -1)
-                {
-                    std::string newWorldName = "";
-                    for(int j = 0; test[j]; j++)
-                    {
-                        unsigned c = test[j];
-
-                        if(32 <= c && c <= 127) // print ascii only
-                            newWorldName += c;
-                    }
-                    StatePlay *statePlay = new StatePlay();
-                    LoadingScreen *loading = new LoadingScreen();
-                    statePlay->InitParametric(terrainType,makeFlat,makeTrees,makeWater,makeCaves,makePumpkins,makeTypes,makeIron,makeCoal,makeGold,makeRedStone,makeDiamond,makeDirt,makeCanes,testseed);
-                    loading->KillLoadingScreen();
-                    delete loading;
-                    statePlay->InitCamera();
-                    statePlay->SetWorldAndSaveName(newWorldName,nextSaveFileName);
-                    sManager->PushState(statePlay);
-
-                }
-            }
-
-            if(generateSelectPose == 1)
-            {
-                generateSelectPose = 0;
-                menuState = 5;
-
-                terrainType = 0;
-                makeFlat = false;
-                makeTrees = true;
-                makeWater = true;
-                makeCaves = true;
-                makePumpkins = true;
-                makeClouds = true;
-                makeTypes = true;
-                makeIron = true;
-                makeCoal = true;
-                makeGold = true;
-                makeRedStone = true;
-                makeDiamond = true;
-                makeDirt = true;
-                makeCanes = true;
-            }
-            if(generateSelectPose == 2)
-            {
-                generateSelectPose = 0;
-                menuState = 7;
-            }
-        }
-    }
-    break;
     case 5://parametric terrain
     {
 
@@ -804,88 +718,7 @@ void StateMenu::HandleEvents(StateManager* sManager)
         }
     }
     break;
-     case 8://survival or creative
-    {
-         if(mSystemMgr->KeyPressed(PSP_CTRL_UP))
-        {
-            generateSelectPose--;
-            if(generateSelectPose < 0)
-                generateSelectPose = 1;
 
-            mSoundMgr->PlayMenuSound();
-        }
-
-        if(mSystemMgr->KeyPressed(PSP_CTRL_DOWN))
-        {
-            generateSelectPose++;
-            if(generateSelectPose > 1)
-                generateSelectPose = 0;
-
-            mSoundMgr->PlayMenuSound();
-        }
-
-        if(mSystemMgr->KeyPressed(PSP_CTRL_CIRCLE))
-        {
-            generateSelectPose = 0;
-            menuState = 0;
-        }
-
-        if(mSystemMgr->KeyPressed(PSP_CTRL_CROSS))
-        {
-            if(generateSelectPose == 0) //survival
-            {
-                unsigned short test[128];
-                unsigned short opis[10] = {'W','o','r','l','d',' ','n','a','m','e'};
-                if(mSystemMgr->ShowOSK(opis,test,128) != -1)
-                {
-                    std::string newWorldName = "";
-                    for(int j = 0; test[j]; j++)
-                    {
-                        unsigned c = test[j];
-
-                        if(32 <= c && c <= 127) // print ascii only
-                            newWorldName += c;
-                    }
-                    StatePlay *statePlay = new StatePlay();
-                    LoadingScreen *loading = new LoadingScreen();
-                    statePlay->InitParametric(terrainType,makeFlat,makeTrees,makeWater,makeCaves,makePumpkins,makeTypes,makeIron,makeCoal,makeGold,makeRedStone,makeDiamond,makeDirt,makeCanes,0);
-                    loading->KillLoadingScreen();
-                    delete loading;
-                    statePlay->InitCamera();
-                    statePlay->SetWorldAndSaveName(newWorldName,nextSaveFileName);
-                    sManager->PushState(statePlay);
-
-                }
-            }
-
-            if(generateSelectPose == 1) //creative
-            {
-                unsigned short test[128];
-                unsigned short opis[10] = {'W','o','r','l','d',' ','n','a','m','e'};
-                if(mSystemMgr->ShowOSK(opis,test,128) != -1)
-                {
-                    std::string newWorldName = "";
-                    for(int j = 0; test[j]; j++)
-                    {
-                        unsigned c = test[j];
-
-                        if(32 <= c && c <= 127) // print ascii only
-                            newWorldName += c;
-                    }
-                    StatePlay *statePlay = new StatePlay();
-                    LoadingScreen *loading = new LoadingScreen();
-                    statePlay->InitParametric(terrainType,makeFlat,makeTrees,makeWater,makeCaves,makePumpkins,makeTypes,makeIron,makeCoal,makeGold,makeRedStone,makeDiamond,makeDirt,makeCanes,0);
-                    loading->KillLoadingScreen();
-                    delete loading;
-                    statePlay->InitCamera();
-                    statePlay->SetWorldAndSaveName(newWorldName,nextSaveFileName);
-                    sManager->PushState(statePlay);
-
-                }
-            }
-        }
-    }
-    break;
     }
 
 }
@@ -994,17 +827,14 @@ void StateMenu::Draw(StateManager* sManager)
         mRender->DebugPrint(240,125,"SinglePlayer");
         mRender->DebugPrint(240,165,"Options");
         mRender->DebugPrint(240,205,"About");
-		mRender->DebugPrint(60,265,"v1.6 Alpha");
+		mRender->DebugPrint(60,265,"v1.0.0 Beta");
 
 		//Text
         float time_s = ((float)(clock() % CLOCKS_PER_SEC)) / ((float)CLOCKS_PER_SEC);
         //mRender->DebugPrint(240,50,"Time: %f", time_s);
         float fontsize = (time_s < 0.5f) ? time_s*511 : (1.0f-time_s)*511;
         //mRender->DebugPrint(240,25,"Size: %f", (fontsize/500));
-
-        int SplashNumber = 0;
         char *SplashText;
-
         //Randomly generate the text number - because is in "while" not working yet
         //SplashNumber = rand() % 2; // 0-2
 
@@ -1014,7 +844,7 @@ void StateMenu::Draw(StateManager* sManager)
             SplashText = "Woo, minecraft!";
             break;
         case 1:
-            SplashText = "Casual Gaming";
+            SplashText = "Craft, build, survive!";
             break;
         case 2:
             SplashText = "Fan fiction";
@@ -1026,10 +856,10 @@ void StateMenu::Draw(StateManager* sManager)
             SplashText = "Gasp! ";
             break;
         case 5:
-            SplashText = "Autonomous! ";
+            SplashText = "Beta! ";
             break;
         case 6:
-            SplashText = "V-synched! ";
+            SplashText = "Camxpspx123 sucks! ";
             break;
         }
 
@@ -1166,7 +996,7 @@ void StateMenu::Draw(StateManager* sManager)
         mRender->SetFontStyle(0.7f,0xFFFFFFFF,0xFF000000,0x00000000);
         mRender->DebugPrint(40,100,"Original Code:  Drakon");
         mRender->DebugPrint(40,120,"Mod by:        Woolio & Joel16");
-        mRender->DebugPrint(40,140,"Version:        1.6");
+        mRender->DebugPrint(40,140,"Version:        1.0.0");
 
         //button text
         mRender->SetFontStyle(0.5f,0xFFFFFFFF,0xFF000000,0x00000200);
@@ -1333,47 +1163,7 @@ void StateMenu::Draw(StateManager* sManager)
         mRender->DebugPrint(240,165,"Load world");
     }
     break;
-    case 8://survival or creative
-    {
 
-
-        sceGuDisable(GU_DEPTH_TEST);
-        sceGuEnable(GU_BLEND);
-        sceGuColor(GU_COLOR(1,1,1,1.0f));
-
-        for(int x = 0; x < 16; x++)
-        {
-            for(int y = 0; y < 9; y++)
-            {
-                backSprite->SetPosition(x*32,y*32);
-                backSprite->Draw();
-            }
-        }
-
-        //logo
-        lamecraftSprite->Draw();
-
-        //Randomly
-        buttonSprite->SetPosition(240,120);
-        buttonSprite->Draw();
-
-        //Parametric
-        buttonSprite->SetPosition(240,160);
-        buttonSprite->Draw();
-
-        //selected button
-        sbuttonSprite->SetPosition(240,(generateSelectPose * 40) + 120);
-        sbuttonSprite->Draw();
-
-        sceGuDisable(GU_BLEND);
-        sceGuEnable(GU_DEPTH_TEST);
-
-        //draw subtitles on buttons
-
-        mRender->DebugPrint(240,125,"Survival");
-        mRender->DebugPrint(240,165,"Creative");
-    }
-    break;
     }
 
     //draw debug text at the end

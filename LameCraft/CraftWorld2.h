@@ -6,6 +6,7 @@
 #include <Aurora/Math/Frustum.h>
 
 #include "Blocks.h"
+#include "Items.h"
 #include "SimpleMeshChunk2.h"
 
 typedef struct
@@ -43,6 +44,7 @@ public:
 
 	void GetSpecialBlockVerts(int i,BaseBlock *blockType);
 	void GetNormalBlockVerts(int i,BaseBlock *blockType);
+	void GetItemVerts(int i,BaseItem *itemType);
 	void buildblocksVerts();
 
 	//chunks handling
@@ -74,6 +76,7 @@ public:
 	//rendering
 	void drawWorld(Frustum &camFrustum,bool camUpdate);
 	void drawCubes(int i);
+	void drawItems(int i);
 
 	//pickin,collision etc
 	void SetBlock (const int x, const int y, const int z, block_t bl);
@@ -92,6 +95,8 @@ public:
 	bool BlockTransparent(const int x, const int y, const int z);
 	bool BlockSpecial(const int x, const int y, const int z);
 	bool BlockEditable(const int x, const int y, const int z);
+	short BlockLoot(const int x, const int y, const int z);
+	short BlockMaterial(const int x, const int y, const int z);
 
 	bool LightSourceBlock(int id);
 	bool CanPutBlockHere(const int x, const int y, const int z,int blockID);
@@ -109,8 +114,27 @@ public:
 	void UpdatePlayerZoneBB(Vector3 playerPosition);
 	void UpdateWorldTime(float dt);
 	int GetBlockTypesCount();
+	int GetItemTypesCount();
+	void UpdateChunkBlocks(int id);
+
+    int invId[36];
+    int invAm[36];
+    bool invSt[36];
+    int mId;
+    int mAm;
+    bool mSt;
+
+    int chestX[32];
+    int chestY[32];
+    int chestZ[32];
+
+    int chestSlotId[576];
+    int chestSlotAm[576];
+    bool chestSlotSt[576];
 
 
+    int HP;
+    int HG;
 
 	char worldName[50];
 	int createdChunksCount;
@@ -145,6 +169,7 @@ private:
 	block_t* m_BlockSettings;
 
 	std::vector<BaseBlock> blockTypes;
+	std::vector<BaseItem> itemTypes;
 
 	float *data;
 

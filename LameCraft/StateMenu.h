@@ -68,6 +68,7 @@ private:
 	SystemManager *mSystemMgr;
 	SoundManager *mSoundMgr;
 
+    int SplashNumber;
     int seed_1;
 	int selectPos;
 	int loadSelectPos;

@@ -76,11 +76,11 @@ public:
 	static block_t getID();
 };
 
-class TNTBlock : public BaseBlock
+class GrayWoolBlock : public BaseBlock
 {
 public:
 
-	TNTBlock();
+	GrayWoolBlock();
 	static block_t getID();
 };
 
@@ -284,11 +284,11 @@ public:
 	static block_t getID();
 };
 
-class WallBlock : public BaseBlock
+class CobbleStone : public BaseBlock
 {
 public:
 
-	WallBlock();
+	CobbleStone();
 	static block_t getID();
 };
 
@@ -325,35 +325,35 @@ public:
 	static block_t getID();
 };
 
-class BrownCoailBlock : public BaseBlock
+class IronOre : public BaseBlock
 {
 public:
 
-	BrownCoailBlock();
+	IronOre();
 	static block_t getID();
 };
 
-class BlackCoailBlock : public BaseBlock
+class CoalOre : public BaseBlock
 {
 public:
 
-	BlackCoailBlock();
+	CoalOre();
 	static block_t getID();
 };
 
-class BlueCoailBlock : public BaseBlock
+class DiamondOre : public BaseBlock
 {
 public:
 
-	BlueCoailBlock();
+	DiamondOre();
 	static block_t getID();
 };
 
-class RedCoailBlock : public BaseBlock
+class RedstoneOre : public BaseBlock
 {
 public:
 
-	RedCoailBlock();
+	RedstoneOre();
 	static block_t getID();
 };
 
@@ -605,35 +605,35 @@ public:
     static block_t getID();
 };
 
-class AetherGrass : public BaseBlock
+class Basalt : public BaseBlock
 {
 public:
 
-    AetherGrass();
+    Basalt();
     static block_t getID();
 };
 
-class AetherWood : public BaseBlock
+class Gabbro : public BaseBlock
 {
 public:
 
-    AetherWood();
+    Gabbro();
     static block_t getID();
 };
 
-class AetherLeaves : public BaseBlock
+class Dacite : public BaseBlock
 {
 public:
 
-    AetherLeaves();
+    Dacite();
     static block_t getID();
 };
 
-class AetherPlanks : public BaseBlock
+class Soil : public BaseBlock
 {
 public:
 
-    AetherPlanks();
+    Soil();
     static block_t getID();
 };
 
@@ -789,43 +789,43 @@ public:
     static block_t getID();
 };
 
-class AetherBlock2 : public BaseBlock
+class ClayBlock : public BaseBlock
 {
 public:
 
-    AetherBlock2();
+    ClayBlock();
     static block_t getID();
 };
 
-class AetherBlock3 : public BaseBlock
+class Chest : public BaseBlock
 {
 public:
 
-    AetherBlock3();
+    Chest();
     static block_t getID();
 };
 
-class AetherBlock4 : public BaseBlock
+class BasaltCobble : public BaseBlock
 {
 public:
 
-    AetherBlock4();
+    BasaltCobble();
     static block_t getID();
 };
 
-class AetherBlock5 : public BaseBlock
+class GabbroCobble : public BaseBlock
 {
 public:
 
-    AetherBlock5();
+    GabbroCobble();
     static block_t getID();
 };
 
-class AetherBlock6 : public BaseBlock
+class DaciteCobble : public BaseBlock
 {
 public:
 
-    AetherBlock6();
+    DaciteCobble();
     static block_t getID();
 };
 
@@ -853,27 +853,27 @@ public:
     static block_t getID();
 };
 
-class RedRock : public BaseBlock
+class Granite : public BaseBlock
 {
 public:
 
-    RedRock();
+    Granite();
     static block_t getID();
 };
 
-class BrownRock : public BaseBlock
+class Rhyolite : public BaseBlock
 {
 public:
 
-    BrownRock();
+    Rhyolite();
     static block_t getID();
 };
 
-class GreyRock : public BaseBlock
+class Komatiite : public BaseBlock
 {
 public:
 
-    GreyRock();
+    Komatiite();
     static block_t getID();
 };
 
@@ -965,6 +965,15 @@ public:
     static block_t getID();
 };
 
+class Sapling : public BaseBlock
+{
+public:
+
+    Sapling();
+    static block_t getID();
+};
+
+
 class Pumpkin2 : public BaseBlock
 {
 public:
@@ -986,6 +995,102 @@ class Pumpkin4 : public BaseBlock
 public:
 
     Pumpkin4();
+    static block_t getID();
+};
+
+class GranitCobble : public BaseBlock
+{
+public:
+
+    GranitCobble();
+    static block_t getID();
+};
+
+class RhyoliteCobble : public BaseBlock
+{
+public:
+
+    RhyoliteCobble();
+    static block_t getID();
+};
+
+class KomatiiteCobble : public BaseBlock
+{
+public:
+
+    KomatiiteCobble();
+    static block_t getID();
+};
+
+class MarbleCobble : public BaseBlock
+{
+public:
+
+    MarbleCobble();
+    static block_t getID();
+};
+
+class Marble : public BaseBlock
+{
+public:
+
+    Marble();
+    static block_t getID();
+};
+
+class Lignite : public BaseBlock
+{
+public:
+
+    Lignite();
+    static block_t getID();
+};
+
+class Chest2 : public BaseBlock
+{
+public:
+
+    Chest2();
+    static block_t getID();
+};
+
+class Chest3 : public BaseBlock
+{
+public:
+
+    Chest3();
+    static block_t getID();
+};
+
+class Chest4 : public BaseBlock
+{
+public:
+
+    Chest4();
+    static block_t getID();
+};
+
+class WheatBlock1 : public BaseBlock
+{
+public:
+
+    WheatBlock1();
+    static block_t getID();
+};
+
+class WheatBlock2 : public BaseBlock
+{
+public:
+
+    WheatBlock2();
+    static block_t getID();
+};
+
+class WheatBlock3 : public BaseBlock
+{
+public:
+
+    WheatBlock3();
     static block_t getID();
 };
 
